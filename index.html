@@ -4,11 +4,80 @@
         <meta charset="utf-8">
         <title>Haldon Views</title>
         <!-- CSS -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            @import url('FORTE.ttf');
+
+            h1 {
+                font-family: 'Forte', sans-serif;
+            }
+
+            .backstretch {
+                filter: blur(1px) brightness(0.5);
+            }
+        </style>
     </head>
     <body>
-
+        <div class="jumbotron text-light">
+            <div class="container py-5">
+                <h1 class="display-1">Haldon Views</h1>
+                <p class="lead">Bi-monthly free newsletter for the Parish of Kenn, Devon!</p>
+            </div>
+        </div>
+        <section class="container text-center">
+            <div class="alert alert-dark">
+                On this site you can download a digital copy of the latest Haldon Views edition as well as contact the editor if you have any requests!
+            </div>
+            <h2 class="display-3 py-4">Latest Editions!</h2>
+            <a href="/newsletter.pdf" class="btn btn-info btn-lg">Download the Latest Haldon Views</a>
+            <a href="/previous-newsletter.pdf" class="btn ml-4 btn-dark btn-lg">Download Last Month's Haldon Views</a>
+            <div class="alert alert-warning my-4">
+                <strong>Disclaimer:</strong> The opinions expressed by various contributors are not necessarily those of the Haldon Views editor. The inclusion of an article in this newsletter does not necessarily imply a recommendation of its aims, policies or methods. No responsibility can be accepted for the information disclosed by advertisements, which are taken in good faith. Every effort is made to ensure the accuracy of information in this newsletter. However, no liability can be accepted for any loss or inconvenience caused as a result of error or omission. The editor reserves the right to edit articles as appropriate.  
+            </div>
+        </section>
+        <section class="card text-white bg-info" style="border-radius: 0">
+            <div class="card-body container">
+                <h2 class="display-4">Contact Us</h2>
+                <p class="lead">You can contact the Haldon Views Editor using the form below. Alternatively, they can be reached via the e-mail address: <a href="mailto:haldonviews@gmail.com" class="text-white font-weight-bold">haldonviews@gmail.com</a>!</p>
+                <form>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Your Name:</label>
+                                <input type="text" class="form-control" placeholder="Joe Bloggs" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Your E-mail:</label>
+                                <input type="email" class="form-control" placeholder="joe.bloggs@example.com" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Message:</label>
+                        <textarea class="form-control" rows="4" required></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-dark btn-lg" value="Send Message">
+                </form>
+            </div>
+        </section>
         <!-- JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+        <script>
+            $(document).ready(() => {
+                $(".jumbotron").backstretch(
+                    ['https://upload.wikimedia.org/wikipedia/commons/e/ea/Kennford.jpg',
+                    'http://www.cornishchurches.com/Kenn%20Church%20Devon%20-%20St.%20Andrew/images/Kenn%20-%20Exterior%20View.JPG',
+                    'https://www.heavitreebrewery.co.uk/wp-content/uploads/2016/05/Ley-Arms-Kenn.jpg',
+                    'http://www.cornishchurches.com/Kenn%20Church%20Devon%20-%20St.%20Andrew/images/Kenn%20-%20The%20Nave.JPG'],
+                    { 
+                        duration: 3000,
+                        fade: 750
+                    });
+            });
+        </script>
     </body>
 </html>
