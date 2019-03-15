@@ -65,24 +65,24 @@
             <div class="card-body container">
                 <h2 class="display-4">Contact Us</h2>
                 <p class="lead">You can contact the Haldon Views Editor using the form below. Alternatively, they can be reached via the e-mail address: <a href="mailto:haldonviews@gmail.com" class="text-white font-weight-bold">haldonviews@gmail.com</a>!</p>
-                <form>
+                <form action="https://formspree.io/haldonviews@gmail.com" method="POST">
                     <div class="form-row">
                         <div class="col">
                             <div class="form-group">
                                 <label>Your Name:</label>
-                                <input type="text" class="form-control" placeholder="Joe Bloggs" required>
+                                <input type="text" name="name" class="form-control" placeholder="Joe Bloggs" required>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label>Your E-mail:</label>
-                                <input type="email" class="form-control" placeholder="joe.bloggs@example.com" required>
+                                <input type="email" class="form-control" name="_replyto" placeholder="joe.bloggs@example.com" required>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Your Message:</label>
-                        <textarea class="form-control" rows="4" required></textarea>
+                        <textarea class="form-control" name="message" rows="4" required></textarea>
                     </div>
                     <input type="submit" class="btn btn-dark btn-lg" value="Send Message">
                 </form>
