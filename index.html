@@ -71,9 +71,9 @@
                 <h1 class="display-1">Haldon Views</h1>
                 <p class="lead">Bi-monthly free newsletter for the Parish of Kenn, Devon!</p>
             </div>
-            <a href="#" class="jumbotron-btn"><i class="fa fa-3x fa-chevron-circle-down"></i></a>
+            <a class="jumbotron-btn"><i class="fa fa-3x fa-chevron-circle-down"></i></a>
         </div>
-        <section class="container text-center">
+        <section id="download" class="container text-center">
             <p>
                 The residents of the parish have enjoyed reading their own magazine for nearly 20 years. The bi monthly, free publication is produced locally, professionally printed and supported by local business sponsorship. The people of Kenn & Kennford benefit from a great community spirit. Throughout the year a number of folk organise a wide variety of events to entertain, educate and inform. The editor ensures Haldon Views helps these hard working organisers by publicising up and coming activities and reporting the achievements of past events. Effective communication is vital. Haldon Views is an important element in keeping the community aware of what’s going on around them!
             </p>
@@ -131,6 +131,11 @@
                         duration: 4000,
                         fade: 750
                     });
+                $(".jumbotron-btn").click(() => {
+                   $("html, body").animate({
+                       scrollTop: $("#download").offset().top
+                   }, 2000); 
+                });
             });
         </script>
     </body>
